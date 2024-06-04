@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Contact us | Antara | Online consultation{% endblock %}
+{% block meta-description %}Your Naturopath from India guiding you towards Holistic Wellness. At Antara, we believe in the power of nature to heal and rejuvenate the body, mind, and spirit.{% endblock %}
+{% block canonical-link %}https://www.antaracares.com/contact-us{% endblock %}
+{% block og-url %}https://www.antaracares.com/static/images/og.jpg{% endblock %}
+{% block og-title %}Contact us | Antara | Online consultation{% endblock %}
+{% block og-sitename %}Contact us | Antara | Online consultation{% endblock %}
+{% block og-imgalt %}Contact us | Antara | Online consultation{% endblock %}
+{% block og-description %}Your Naturopath from India guiding you towards Holistic Wellness. At Antara, we believe in the power of nature to heal and rejuvenate the body, mind, and spirit.{% endblock %}
+{% block twitter-imgalt %}Contact us | Antara | Online consultation{% endblock %}
+{% block twitter-title %}Contact us{% endblock %}
+{% block twitter-description %}Your Naturopath from India guiding you towards Holistic Wellness. At Antara, we believe in the power of nature to heal and rejuvenate the body, mind, and spirit.{% endblock %}
+
+{% block content %}
+<!-- Section 1 -->
+<section class="our-story-sec1">
+    <div class="our-story-section1">
+        <div class="about-title">
+            <div class="service-title-box">
+                <div class="service-title-box-bg d-flex flex-column justify-content-center">
+                    <h1 class="home-sec-1-title text-center mb-0 pb-3 px-3 text-animate-2">Your Journey to wellness<br>starts here.</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section 6 -->
+<section id="home-scroll" class="home-section-6 bg-sandal py-5">
+    <div class="container-margin section4">
+    <div class="row align-items-center g-5">
+        <div class="col-lg-5 col-12 order-lg-1 order-2 mt-5 mt-lg-0">
+            <div class="home-sec-6-top">
+                <p class="our-story-para font-avenir-light text-start text-lg-center mb-0">Experience the healing power of nature with Antara. Whether you seek relief from chronic conditions, desire preventative care, or simply want to enhance your overall well-being, desire preventative care, or simply want to enhance your overall well-being, Antara is here to support you. Contact us today to schedule a consultation and take the first step towards a healthier, more balanced life.</p>
+            </div>
+        </div>
+        <div class="col-lg-7 col-12 order-lg-2 order-1 mt-0">
+            <div class="home-sec6-img">
+                <img width="600" class="img-fluid" src="{% static 'images/about-us-5.jpg' %}" alt="About Naturopathy Image">
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
+
+<!-- Enquiry Section -->
+<section class="home-enquiry-section bg-white d-flex py-5 py-lg-0 my-0">
+    <div class="container-margin mt-0 mt-lg-5">
+    <div class="home-enq-form mt-0 mt-lg-5">
+        <div class="row justify-content-center">
+        <div class="col-lg-6 order-lg-1 order-2">
+            <div class="home-enq-title">
+            <h4 class="home-enq-title-t mb-4 text-center text-animate">Enquire <span>Us</span></h4>
+            <span class="title-border title-border-ani-6"></span>
+            </div>
+            <form method="POST" action="{% url 'contactus' %}" class="row g-lg-4 g-3">
+                {% csrf_token %}
+                <div class="col-md-6">
+                  <div class="row g-4">
+                    <div class="col-md-12">
+                      {{ form.name }}
+                    </div>
+                    <div class="col-md-12">
+                      {{ form.email }}
+                    </div>
+                    <div class="col-md-12">
+                      {{ form.mobile }}
+                    </div>
+                    <div class="col-md-12">
+                      {{ form.gender }}
+                    </div>
+                    <div class="col-md-12">
+                      {{ form.country }}
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="row g-4">
+                    <div class="col-md-12">
+                      {{ form.city }}
+                    </div>
+                    <div class="col-md-12">
+                      {{ form.nationality }}
+                    </div>
+                    <div class="col-md-12">
+                      {{ form.comment }}
+                    </div>
+                    <div class="col-md-12">
+                      {{ form.aboutus }}
+                    </div>
+                  </div>
+                </div>
+                {{ form.captcha }}
+                {% for error in form.captcha.errors %}
+                <p>{{ error }}</p>
+                {% endfor %}
+                <div class="col-md-12 text-center">
+                  <button class="home-enq-submit" type="submit">Submit</button>
+                </div>
+              </form>
+        </div>
+        </div>
+    </div>
+    </div>
+</section>
+{% endblock %}

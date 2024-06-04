@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}404 | Antara | Online consultation{% endblock %}
+
+{% block content %}
+<!-- Section 1 -->
+<section class="our-story-sec1">
+    <div class="home-section3">
+        <div class="about-title" style="background: linear-gradient(180deg, rgb(255 255 255 / 0%) 0%, rgb(0 11 21 / 30%) 39%, rgb(0 11 21 / 40%) 100%);">
+            <div class="service-title-box">
+                <div class="service-title-box-bg d-flex flex-column justify-content-center">
+                    <h1 class="home-sec-1-title display-1 text-center py-3 px-3 text-animate-2">404</h1>
+                    <h1 class="home-sec-1-title display-1 text-center py-3 px-3 text-animate-2">Ooops!</h1>
+                    <p class="font-avenir-light text-center text-white">Page not found</p>
+                    <a href="{% url 'home' %}" title="Chat with us on Whatsapp" class="home-enq-appointment-2 me-0 me-lg-1 mb-2 mb-lg-0" style="background-color: #fff1e9;"><span class="z-index-1"><i class="fa-solid fa-house"></i> Go Back Home</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

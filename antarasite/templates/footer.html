@@ -1,0 +1,77 @@
+{% load static %}
+
+<footer>
+    <div class="edubest-footer font-avenir-light">
+      <div class="container-margin-footer">
+        <div class="row g-0 g-lg-5">
+          <div class="col-lg-3 col-6">
+            <ul class="footer-menu p-0 ms-0 ms-lg-4">
+              <li><a class="footer-link" href="{% url 'aboutus' %}">About Us</a></li>
+              <li class="nav-item dropdown d-desktop no-d-mobile">
+                <a class="nav-link dropdown-toggle footer-link" href="#" id="navbarDarkDropdownMenuLink" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Consultations
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
+                    <li class="mb-0"><a class="dropdown-item" href="{% url 'serviceyt' %}">Yoga Consultation</a></li>
+                  <li class="mb-0"><a class="dropdown-item" href="{% url 'servicenc' %}">Naturopathic Consultation</a></li>
+                  <li class="mb-0"><a class="dropdown-item" href="{% url 'servicendc' %}">Nutrition and Diet Consultation</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown d-desktop no-d-mobile">
+                <a class="nav-link dropdown-toggle footer-link" href="#" id="navbarDarkDropdownMenuLink" role="button"
+                  data-bs-toggle="dropdown" aria-expanded="false">
+                  Specialised Cares
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
+                  {% comment %} <li class="mb-0"><a class="dropdown-item" href="{% url 'servicedc' %}">Diabetes Consultation</a></li> {% endcomment %}
+                  <li class="mb-0"><a class="dropdown-item" href="{% url 'servicehh' %}">Men’s Health</a></li>
+                  <li class="mb-0"><a class="dropdown-item" href="{% url 'serviceww' %}">Women Wellness</a></li>
+                  <li class="mb-0"><a class="dropdown-item" href="{% url 'servicekw' %}">Weight Management and Obesity</a></li>
+                  <li class="mb-0"><a class="dropdown-item" href="{% url 'servicesc' %}">Senior Care</a></li>
+                  <li class="mb-0"><a class="dropdown-item" href="{% url 'servicedp' %}">Detoxification Programs</a></li>
+                </ul>
+              </li>
+              <li><a class="footer-link" href="{% url 'yogaclub' %}">Yoga Club</a></li>
+              <li><a class="footer-link" href="https://antaracares1.zohobookings.in/#/book-appointment">Online Consult</a></li>
+              <li><a class="footer-link" href="{% url 'antaraescapes' %}">Escapes</a></li>
+              <li><a class="footer-link" href="{% url 'contactus' %}">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-9 col-6">
+            <div class="row g-0 g-lg-5">
+              <div class="col-lg-4">
+                <h5 class="footer-header">Address:</h5>
+                <p class="footer-description">Samruddhi Resort and Farms<br>Agodapali<br>Kelamangalam road,<br>Hosur, Tamil Nadu 635110</p>
+              </div>
+              <div class="col-lg-4 mb-3">
+                <h5 class="footer-header">Phone No:</h5>
+                <a href="tel:+917845518010" class="footer-description footer-desc-link">+91 78 45 518 010</a>
+              </div>
+              {% comment %} <div class="col-lg-3 mb-3">
+                <h5 class="footer-header">Website</h5>
+                <a href="#" class="footer-description footer-desc-link">example-website.com</a>
+              </div> {% endcomment %}
+              <div class="col-lg-4">
+                <h5 class="footer-header">Email</h5>
+                <a href="mailto:antaracares@gmail.com" class="footer-description footer-desc-link">antaracares@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="edubest-footer-bottom">
+      <div class="container-margin-footer d-flex">
+        <div class="edubest-footer-logo d-flex me-auto">
+          {% comment %} <a href="{% url 'home' %}"><img class="img-fluid footer-logo" src="{% static 'images/logo.svg' %}"
+              alt="Antara Online Naturopathy Consultation"></a> {% endcomment %}
+              <a href="{% static 'images/Terms_ANTARA.pdf' %}" target="blank" class="me-3">Terms and conditions</a>
+                <a href="{% static 'images/ANTARA_booking_Cancellation policy.pdf' %}"  target="blank">Booking and cancellation policy</a>
+        </div>
+        <div class="edu-best-footer-cr font-avenir-light">
+          <p class="edu-best-footer-cr-p">© 2023 Antara</p>
+        </div>
+      </div>
+    </div>
+  </footer>
